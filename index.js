@@ -1,5 +1,7 @@
 import express from 'express'
 import 'dotenv/config'
+import connexion from './routes/connexion.route.js'
+import inscription from './routes/connexion.route.js'
 
 const app = express()
 
@@ -7,7 +9,18 @@ app.use(express.urlencoded())// middleware parser
 
 
 // Mapping entre routes et le routeur
-//app.use("/", home)
+
+app.use('/connexion',connexion)
+app.get('/connexion',(req,res) =>{
+    res.render("connexion")
+
+})
+app.use('/inscription',inscription)
+app.get('/inscription',(req,res) =>{
+    res.render("inscription")
+
+})
+
 
 
 // Configuration du moteur de template
