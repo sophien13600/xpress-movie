@@ -10,13 +10,13 @@ app.use(express.urlencoded());
 // Mapping entre routes et le routeur
 
 app.use("/connexion", connexion);
-app.get("/connexion", (req, res) => {
-  res.render("connexion");
-});
+// app.get("/connexion", (req, res) => {
+//   res.render("connexion");
+// });
 app.use("/inscription", inscription);
-app.get("/inscription", (req, res) => {
-  res.render("inscription");
-});
+// app.get("/inscription", (req, res) => {
+//   res.render("inscription");
+// });
 
 // Configuration du moteur de template
 app.set("view engine", "ejs");
