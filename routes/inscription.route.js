@@ -1,7 +1,7 @@
-import express from 'express'
-import loginController from '../controllers/login.controller.js'
-// ici, on gère les routes relatives  aux personnes
-const router = express.Router()
+import express from "express";
+import RegisterController from "../controllers/register.controller.js";
 
-router.get('inscription', )
-export default router
+const router = express.Router();
+
+router.get("/inscription", RegisterController.add);
+export default router;
