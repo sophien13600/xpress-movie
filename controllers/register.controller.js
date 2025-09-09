@@ -9,7 +9,7 @@ const add = async (req, res, next) => {
     if(req.body){
         const user = await RegisterRepository.register(req.body);
         if(user) {
-            
+            res
             res.redirect('/');
         } else {
             res.redirect('/inscription');

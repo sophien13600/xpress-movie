@@ -6,5 +6,5 @@ const router = express.Router();
 router.get("/", (req, res) => {
   res.render("inscription");
 });
-router.get("/inscription", RegisterController.add);
+router.post("/", RegisterController.add);
 export default router;
